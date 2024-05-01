@@ -11,15 +11,15 @@
 - [x] Create and clone a Git repository: create a repository in github, then use git clone to clone this repo to local (use the SSH link not HTTPS link from github site, as we have set up SSH in previous steps)
 - [x] Python script: in vs code
 ## Project 1 Objective (from AOS Note project): 
-### when a files move to S3 buckent, a lambda function is triggered to move the file to a folder with folder name as YYYYMMDD/filename. YYYYMMDD is the time when the file is created.
+when a file moves to S3 buckent, a lambda function is triggered to move the file to a folder with folder name as YYYYMMDD/filename. YYYYMMDD is the time when the file is created.
 ### Steps
 * Get today’s date and format as 	"%Y%m%d"
-* In lambda_handler function
+* In lambda_handler function:
   - List all folder names insdie the bucket: if no such folder as “YYYYMMDD/” exists, then create such a folder; if such a folder already exists, then list all objects inside this folder,
   - Write a for loop to go over each file’s name, if the file’s last modified date is today and its name doesn’t contain “/”, then copy the file to the folder with name “YYYYMMDD/” and delete original file.
  
 ## Project 2 Objective (based on Rajdeep Saha project): 
-### AWS API gateway – Lambda function – DynamoDB microservices; lambda function to get and post item in DynamoDB table.
+AWS API gateway – Lambda function – DynamoDB microservices; lambda function to get and post item in DynamoDB table.
 ### Steps
 <img src="https://github.com/klgit23/proj1-docker-projects/assets/154713258/9692644e-ee0f-4b8c-9f63-e91e928e8d09" width="30%" height="40%">
 
